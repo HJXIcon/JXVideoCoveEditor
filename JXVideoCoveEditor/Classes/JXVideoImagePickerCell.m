@@ -47,8 +47,8 @@
     
     JXWeakSelf(self);
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.left.bottom.top.right.mas_equalTo(weakself.contentView);
+        JXStrongSelf(self);
+        make.left.bottom.top.right.mas_equalTo(self.contentView);
     }];
 }
 

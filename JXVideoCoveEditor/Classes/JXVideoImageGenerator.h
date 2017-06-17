@@ -40,7 +40,9 @@ typedef void(^SequenceOfImagesClosure)(NSArray <JXVideoImage *>*);
 
 
 
-
+/**！
+ 视频关键帧图片生成管理者
+ */
 @interface JXVideoImageGenerator : NSObject
 
 /**
@@ -52,7 +54,14 @@ typedef void(^SequenceOfImagesClosure)(NSArray <JXVideoImage *>*);
  */
 + (void)generateSingleImageFromAsset:(AVAsset *)asset second:(Float64)second closure:(SingleImageClosure)closure;
 
+/// generate images of times
+///
+/// - parameter asset:     AVAsset
+/// - parameter seconds:   seconds
+/// - parameter closure:   completed handler
 + (void)generateSequenceOfImages:(AVAsset *)asset seconds:(NSArray <NSNumber *>*)seconds closure:(SequenceOfImagesClosure)closure;
+
+
 /// 默认
 + (void)generateDefaultSequenceOfImagesFromAsset:(AVAsset *)asset closure:(SequenceOfImagesClosure)closure;
 @end

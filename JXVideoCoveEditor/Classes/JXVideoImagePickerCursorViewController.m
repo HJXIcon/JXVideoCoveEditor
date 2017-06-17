@@ -57,16 +57,18 @@
     
     JXWeakSelf(self);
     [self.cursorView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(weakself.view);
-        make.size.mas_equalTo(CGSizeMake(15, weakself.view.bounds.size.height));
-        make.bottom.equalTo(weakself.view.mas_bottom).offset(0);
+        JXStrongSelf(self);
+        make.centerX.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(15, self.view.bounds.size.height));
+        make.bottom.equalTo(self.view.mas_bottom).offset(0);
     }];
     
     
     [self.line mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(weakself.cursorView);
-        make.size.mas_equalTo(CGSizeMake(1, weakself.view.bounds.size.height));
-        make.bottom.equalTo(weakself.cursorView.mas_bottom).offset(0);
+        JXStrongSelf(self);
+        make.centerX.equalTo(self.cursorView);
+        make.size.mas_equalTo(CGSizeMake(1, self.view.bounds.size.height));
+        make.bottom.equalTo(self.cursorView.mas_bottom).offset(0);
     }];
     
 }

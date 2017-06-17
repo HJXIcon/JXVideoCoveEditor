@@ -11,6 +11,9 @@
 #import "JXVideoImageGenerator.h"
 
 
+/**
+ 图片显示Collectionview VC
+ */
 @interface JXVideoImagePickerViewController : UIViewController
 
 
@@ -20,9 +23,11 @@
 /** videoPath*/
 @property (nonatomic, strong)NSString *videoPath;
 
-@property (nonatomic, copy) SingleImageClosure generatedKeyframeImageHandler;
+@property (nonatomic, copy) void(^generatedKeyframeImageHandler)(UIImage *) ;
 
 /** imageGenerator*/
 @property (nonatomic, strong)JXVideoImageGenerator *imageGenerator;
+
+
 
 @end

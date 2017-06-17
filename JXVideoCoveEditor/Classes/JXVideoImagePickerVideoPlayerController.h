@@ -16,6 +16,10 @@
 
 //  想要定格的时间
 - (void)seekToTime:(CMTime)time;
+
+// 回调图片
+@property(nonatomic, copy) void(^ResultImageBlock)(UIImage *);
+
 @end
 
 

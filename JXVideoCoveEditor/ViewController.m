@@ -11,9 +11,14 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 
 @implementation ViewController
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,6 +34,15 @@
     JXVideoImagePickerViewController *vc = [[JXVideoImagePickerViewController alloc]init];
     
     vc.videoPath = videoPath;
+    
+    JXWeakSelf(self);
+    [vc setGeneratedKeyframeImageHandler:^(UIImage *image) {
+        
+        JXStrongSelf(self);
+        self.imageView.image = image;
+        
+    }];
+    
     [self.navigationController pushViewController:vc animated:YES];
     
 }

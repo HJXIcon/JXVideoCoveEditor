@@ -44,7 +44,11 @@
     
 }
 
-
+/// generate image of time
+///
+/// - parameter asset:   AVAsset
+/// - parameter time:    wanted time, default kCMTimeZero
+/// - parameter closure: completed handler
 + (void)generateSingleImageFromAsset:(AVAsset *)asset time:(CMTime)time closure:(SingleImageClosure)closure{
     
     AVAssetImageGenerator *imageGenerator = [AVAssetImageGenerator assetImageGeneratorWithAsset:asset];
@@ -100,6 +104,11 @@
     
 }
 
+/// generate images of times
+///
+/// - parameter asset:   AVAsset
+/// - parameter times:   [CMTime]
+/// - parameter closure: completed handler
 
 + (void)generateSequenceOfImagesFromAsset:(AVAsset *)asset times:(NSArray <NSValue *>*)times closure:(SequenceOfImagesClosure)closure{
     
@@ -151,7 +160,10 @@
 }
 
 
-
+/// generate default images with asset(like iPhone photo library)
+///
+/// - parameter asset:   AVAsset
+/// - parameter closure: completed handler
 + (void)generateDefaultSequenceOfImagesFromAsset:(AVAsset *)asset closure:(SequenceOfImagesClosure)closure{
     
     

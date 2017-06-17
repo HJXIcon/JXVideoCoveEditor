@@ -38,6 +38,16 @@ static CGFloat const KeyframePickerViewCellHeight = 40;
     if (_displayerVC == nil) {
         _displayerVC = [[JXVideoImagePickerVideoPlayerController alloc]init];
         _displayerVC.asset = [self getAsset];
+        
+        JXWeakSelf(self);
+        [_displayerVC setResultImageBlock:^(UIImage *resultImage) {
+            JXStrongSelf(self);
+            
+            if (self.generatedKeyframeImageHandler) {
+                self.generatedKeyframeImageHandler(resultImage);
+            }
+            
+        }];
     }
     return _displayerVC;
 }
@@ -56,8 +66,9 @@ static CGFloat const KeyframePickerViewCellHeight = 40;
         _UIService.asset = [self getAsset];
         JXWeakSelf(self);
         [_UIService setScrollDidBlock:^(CMTime currentTime) {
-            
-//            [weakself.displayerVC seekToTime:currentTime];
+            JXStrongSelf(self);
+
+            [self.displayerVC seekToTime:currentTime];
         }];
     }
     return _UIService;
@@ -137,6 +148,8 @@ static CGFloat const KeyframePickerViewCellHeight = 40;
         make.height.equalTo(@200);
         
     }];
+    
+//    self.displayerVC.view.backgroundColor = [UIColor redColor];
     
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         

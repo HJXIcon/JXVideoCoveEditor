@@ -20,6 +20,7 @@
 		0442E7D21ECC59B40012EFF6 /* JXVideoImagePickerCursorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442E7CA1ECC59B40012EFF6 /* JXVideoImagePickerCursorViewController.m */; };
 		0442E7D41ECC59B40012EFF6 /* JXVideoImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442E7CE1ECC59B40012EFF6 /* JXVideoImagePickerViewController.m */; };
 		049FCF2F1ECD35F200229742 /* JXVideoImagePickerVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049FCF2E1ECD35F200229742 /* JXVideoImagePickerVideoPlayerController.m */; };
+		04D0DEB61EF5236E00AE0195 /* videoCoveEditor.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04D0DEB51EF5236E00AE0195 /* videoCoveEditor.gif */; };
 		3793A51DA2A166BFB55BB18C /* libPods-JXVideoCoveEditor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C8CA3AA4520FB8B6BD1571 /* libPods-JXVideoCoveEditor.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		0442E7CE1ECC59B40012EFF6 /* JXVideoImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXVideoImagePickerViewController.m; sourceTree = "<group>"; };
 		049FCF2D1ECD35F200229742 /* JXVideoImagePickerVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXVideoImagePickerVideoPlayerController.h; sourceTree = "<group>"; };
 		049FCF2E1ECD35F200229742 /* JXVideoImagePickerVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXVideoImagePickerVideoPlayerController.m; sourceTree = "<group>"; };
+		04D0DEB51EF5236E00AE0195 /* videoCoveEditor.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = videoCoveEditor.gif; sourceTree = "<group>"; };
 		1317076B8A8AC51BA89AB98E /* Pods-JXVideoCoveEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXVideoCoveEditor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXVideoCoveEditor/Pods-JXVideoCoveEditor.debug.xcconfig"; sourceTree = "<group>"; };
 		23C8CA3AA4520FB8B6BD1571 /* libPods-JXVideoCoveEditor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JXVideoCoveEditor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24773C2CB3D1D19A176F8B2 /* Pods-JXVideoCoveEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXVideoCoveEditor.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXVideoCoveEditor/Pods-JXVideoCoveEditor.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		0442E7A71ECC58BC0012EFF6 /* JXVideoCoveEditor */ = {
 			isa = PBXGroup;
 			children = (
+				04D0DEB51EF5236E00AE0195 /* videoCoveEditor.gif */,
 				0442E7C11ECC599E0012EFF6 /* trip.mp4 */,
 				0442E7C01ECC59800012EFF6 /* Classes */,
 				0442E7AB1ECC58BC0012EFF6 /* AppDelegate.h */,
@@ -210,6 +213,7 @@
 				0442E7B81ECC58BC0012EFF6 /* LaunchScreen.storyboard in Resources */,
 				0442E7B51ECC58BC0012EFF6 /* Assets.xcassets in Resources */,
 				0442E7C21ECC599E0012EFF6 /* trip.mp4 in Resources */,
+				04D0DEB61EF5236E00AE0195 /* videoCoveEditor.gif in Resources */,
 				0442E7B31ECC58BC0012EFF6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
